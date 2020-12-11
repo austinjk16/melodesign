@@ -1,0 +1,41 @@
+Melodesign set out to be a tool to randomly generate melodies that are
+harmonized with matching chord progressions. The initial challenge was
+to create an algorithm that could generate these musical structures.
+Following strict and general rules of music theory, we implemented a
+recursive strategies to generate both parts of the compositions. The
+chord progression is generated first, and it uses a Map that represents
+a set of rules for which chords follow which other chords (musical grammer).
+This generates a series of chord numbers of the desired length, and then
+keeps the result if the final two chords are a 5 to 1 cadence. Next, the
+melody can be created to match the chords. This time, there is a list of
+motion options that are desirable for a good melody, which limits how
+much it can jump around and by how much (to certain quotas based on the
+duration). The melody checks which chord is coming next, compares it to
+the current note, determines which next notes could be valid, and then
+randomly picks one of those options until it finds one that is a legal
+move. It then adds it to the melody and decrements the remaining quota
+for that size of melodic motion. This way, every note matches the 
+accompanying chord, but it also creates a primarily-stepwise melody
+that resembles something you would actually see in real music.
+The MelodyGenerator class constructs its progression and melody, and
+then getProgression and getMelody methods can retrieve those lists of
+numbers for use in different forms of output.
+
+ToMidi turned out to be more of a challenge than expected. The first
+difficulty was figuring out how to store the data that we were using
+for root notes and modes, so we could allow the client to select 
+and combination that they wanted. The solution, to avoid making
+the methods in ToMidi look overly cluttered, was to store the data in
+text files. This also makes for easy editing. Another challenge was 
+working in coordinance with the jMusic libraries. We wanted to use jMusic,
+because it served as a solution from converting the adjusted melodies into
+something that can easily turn into midi files. In the end, it saved us 
+time by not having to code aspects that were irrelevant to what we were
+trying to spend out time on, but they are very old and complex libraries.
+The biggest problem was figuring out how to play the phrases that we created.
+Unfortunately the play function cannot play the chords and melody at the same
+time, so we could only play back the melody to the user. They can still
+download the midi files for both the chords and melody, and input them into 
+a DAW, which is a vital part of the program. 
+
+

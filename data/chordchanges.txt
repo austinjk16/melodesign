@@ -1,0 +1,9 @@
+major maj min min maj maj min dim
+minor min dim maj min maj maj maj
+ionian maj min min maj maj min dim
+dorian min min maj maj min dim maj
+phrygian min maj maj min dim maj min
+lydian maj maj min dim maj min min
+mixolydian maj min dim maj min min maj
+aeolian min dim maj min min maj maj
+locrian dim maj min min maj maj min

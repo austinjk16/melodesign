@@ -1,0 +1,11 @@
+Reflection
+One thing we learned was the process of coming up with an idea and executing it using coding. 
+We learned it involved setting goals for ourselves and it was a lot more difficult than having 
+a specification that you follow. Some of the things we enjoyed in the project was the creative 
+freedom of what we got to do. Everyone in the group enjoyed music and played music growing up, 
+so getting to work on a project about music was refreshing compared to assignments on the 
+course that we may not have been as exited about. One thing we found frustrating was how 
+difficult it was to combine different things we worked on and learning exactly how each other's 
+programs worked. Something helpful that we noticed was commenting. Commenting allowed for a much 
+easier way to understand how someone's program worked. It was vital in getting the project come together. 
+
